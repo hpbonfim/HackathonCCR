@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, StyleSheet, TouchableOpacity, Text, ScrollView, SafeAreaView, Image } from 'react-native'
 import Constants from 'expo-constants'
 import { useNavigation } from '@react-navigation/native'
+import Landing from '../../components/Landing'
 
 const Navigation = () => {
 
@@ -26,47 +27,39 @@ const Navigation = () => {
         <SafeAreaView style={{ flex: 1 }} >
 
             <View style={styles.container}>
-              
+                <Landing />
             </View>
 
             <View style={styles.menuContainer}>
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{
-                        paddingHorizontal: 20
-                    }}>
 
-                    <TouchableOpacity
-                        style={ styles.item }
-                        onPress={() => handleNavigateSaude()}
-                        activeOpacity={0.6}
-                    >
-                        <Image source={require('../../icons/saude.png')} style={styles.imagem} />
-                        <Text style={styles.menuTitle}>Saúde</Text>
-                    </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.item}
+                    onPress={() => handleNavigateSaude()}
+                    activeOpacity={0.6}
+                >
+                    <Image source={require('../../icons/saude.png')} style={styles.imagem} />
+                    <Text style={styles.menuTitle}>Saúde</Text>
+                </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={ styles.item }
-                        onPress={() => { styles.selectedItem, handleNavigateMapa() }}
-                        activeOpacity={0.6}
-                    >
-                        <Image source={require('../../icons/mapa.png')} style={styles.imagem} />
+                <TouchableOpacity
+                    style={styles.item}
+                    onPress={() => { styles.selectedItem, handleNavigateMapa() }}
+                    activeOpacity={0.6}
+                >
+                    <Image source={require('../../icons/mapa.png')} style={styles.imagem} />
 
-                        <Text style={styles.menuTitle}>Mapa</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.menuTitle}>Mapa</Text>
+                </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={ styles.item }
-                        onPress={() => handleNavigateFerramentas()}
-                        activeOpacity={0.6}
-                    >
-                        <Image source={require('../../icons/ferramentas.png')} style={styles.imagem} />
+                <TouchableOpacity
+                    style={styles.item}
+                    onPress={() => handleNavigateFerramentas()}
+                    activeOpacity={0.6}
+                >
+                    <Image source={require('../../icons/ferramentas.png')} style={styles.imagem} />
 
-                        <Text style={styles.menuTitle}>Ferramentas</Text>
-                    </TouchableOpacity>
-
-                </ScrollView>
+                    <Text style={styles.menuTitle}>Ferramentas</Text>
+                </TouchableOpacity>
 
             </View>
 
@@ -86,7 +79,9 @@ const styles = StyleSheet.create({
     menuContainer: {
         flexDirection: 'row',
         marginTop: 16,
-        marginBottom: 32
+        marginBottom: 32,
+        justifyContent: 'center'
+
     },
 
     item: {

@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Roboto_500Medium',
     },
+
 });
 
 

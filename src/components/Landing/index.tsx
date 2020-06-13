@@ -1,16 +1,9 @@
 import React from 'react'
-import { View, ImageBackground, StyleSheet, Text, KeyboardAvoidingView, Platform } from 'react-native'
-import { RectButton } from 'react-native-gesture-handler'
-import { Feather as Icon } from '@expo/vector-icons'
-import { useNavigation } from '@react-navigation/native'
+import { View, ImageBackground, StyleSheet, Text} from 'react-native'
+
 
 
 const Landing = () => {
-    const navigation = useNavigation()
-
-    function handleNavigationToMenu() {
-        navigation.navigate('Navigation')
-    }
 
     return (
           <ImageBackground source={require('../../../assets/canivete.png')} style={styles.container} imageStyle={{ width: 324, height: 264 }}>
@@ -19,19 +12,6 @@ const Landing = () => {
                     SUA FERRAMENTA DE BORDO DENTRO E FORA DAS ESTRADAS. 😷
                     </Text>
             </View>
-            <View>
-                <RectButton style={styles.button} onPress={handleNavigationToMenu}>
-                    <View style={styles.buttonIcon}>
-                        <Text>
-                            <Icon name="arrow-right" color="#fff" size={24} />
-                        </Text>
-                    </View>
-                    <Text style={styles.buttonText}>
-                        ACESSAR
-                        </Text>
-                </RectButton>
-            </View>
-
         </ImageBackground>
     )
 }

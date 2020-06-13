@@ -1,8 +1,10 @@
 import React from 'react'
-import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, SafeAreaView, Image, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather as Icon } from '@expo/vector-icons'
 import Constants from 'expo-constants'
+import MapView, { Marker } from 'react-native-maps'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const Mapa = () => {
 
@@ -19,6 +21,103 @@ const Mapa = () => {
                     <Icon name="arrow-left" size={20} color="#34cb79" />
                 </TouchableOpacity>
             </View>
+            <View style={styles.mapContainer}>
+
+                <MapView style={styles.map}
+                    initialRegion={{
+                        latitude: -0,
+                        longitude: -0,
+                        latitudeDelta: 0.014,
+                        longitudeDelta: 0.014
+                    }}>
+
+                    <Marker
+                        style={styles.mapMarker}
+                        coordinate={{
+                            latitude: -0,
+                            longitude: -0,
+                        }} >
+                        <View style={styles.mapMarkerContainer}>
+                            <Image style={styles.mapMarkerImage} source={require('../../../icons/pedagio.png')} />
+                            <Text style={styles.mapMarkerTitle}>pedagio</Text>
+                        </View>
+                    </Marker>
+
+                </MapView>
+
+            </View>
+
+
+            <View style={styles.itemsContainer}>
+
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                        paddingHorizontal: 20
+                    }}>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/finish.png')} />
+                        <Text style={styles.itemTitle}>Calcular Rota</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={{ width: 38, height: 48 }} source={require('../../../icons/ccr.png')} />
+
+                        <Text style={styles.itemTitle}>Postos CCR</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/fuel.png')} />
+
+                        <Text style={styles.itemTitle}>Postos de Gasolina</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/cafe.png')} />
+
+                        <Text style={styles.itemTitle}>Locais de Alimentação</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/sleep.png')} />
+
+                        <Text style={styles.itemTitle}>Locais de Descanso</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.6}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/police.png')} />
+                        <Text style={styles.itemTitle}>Posto Policial</Text>
+                    </TouchableOpacity>
+
+                </ScrollView>
+
+            </View>
         </SafeAreaView>
     )
 }
@@ -26,9 +125,8 @@ const Mapa = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         paddingHorizontal: 32,
-        paddingTop: 20 + Constants.statusBarHeight,
+        paddingTop: 10 + Constants.statusBarHeight,
     },
 
     title: {
@@ -117,7 +215,12 @@ const styles = StyleSheet.create({
     itemTitle: {
         fontFamily: 'Roboto_400Regular',
         textAlign: 'center',
-        fontSize: 13,
+        fontSize: 15,
+    },
+
+    imagem: {
+        width: 42,
+        height: 42
     },
 });
 
