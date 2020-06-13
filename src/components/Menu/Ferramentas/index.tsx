@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, TouchableOpacity, SafeAreaView, Image, Text } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, SafeAreaView, Image, Text, Linking } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather as Icon } from '@expo/vector-icons'
 import Constants from 'expo-constants'
@@ -14,6 +14,34 @@ const Ferramentas = () => {
 
   function handleNavigateListaCCR() {
     navigation.navigate('listaCCR')
+  }
+
+  function handleNavigateDialetoEstradeiro() {
+    navigation.navigate('dialetoEstradeiro')
+  }
+
+  function handleNavigateLanterna() {
+    navigation.navigate('lanterna')
+  }
+
+  function handleNavigateMeuCaminhao() {
+    navigation.navigate('meuCaminhao')
+  }
+
+  function handleNavigateMeusNegocios() {
+    navigation.navigate('meusNegocios')
+  }
+
+  function handleNavigateMinhaAgenda() {
+    navigation.navigate('minhaAgenda')
+  }
+
+  function handleNavigateSosMecanica() {
+    navigation.navigate('sosMecanica')
+  }
+  
+  function handleNavigateValeDescontos() {
+    navigation.navigate('valeDescontos')
   }
 
   return (
@@ -32,12 +60,10 @@ const Ferramentas = () => {
 
       <View style={styles.menuContainer}>
 
-
-
         <View style={styles.upContainer}>
           <TouchableOpacity
             style={styles.item}
-            onPress={() => ('')}
+            onPress={() => handleNavigateMeusNegocios()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/money.png')} />
@@ -47,7 +73,7 @@ const Ferramentas = () => {
 
           <TouchableOpacity
             style={styles.item}
-            onPress={() => handleNavigateListaCCR()}
+            onPress={() => handleNavigateValeDescontos()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/coupon.png')} />
@@ -57,7 +83,7 @@ const Ferramentas = () => {
 
           <TouchableOpacity
             style={styles.item}
-            onPress={() => ('')}
+            onPress={() => handleNavigateMeuCaminhao()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/logo.png')} />
@@ -68,7 +94,7 @@ const Ferramentas = () => {
         <View style={styles.downContainer}>
           <TouchableOpacity
             style={styles.item}
-            onPress={() => ('')}
+            onPress={() => handleNavigateDialetoEstradeiro()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/guide.png')} />
@@ -79,7 +105,7 @@ const Ferramentas = () => {
 
           <TouchableOpacity
             style={styles.item}
-            onPress={() => handleNavigateListaCCR()}
+            onPress={() => handleNavigateLanterna()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/light.png')} />
@@ -89,7 +115,7 @@ const Ferramentas = () => {
 
           <TouchableOpacity
             style={styles.item}
-            onPress={() => ('')}
+            onPress={() => handleNavigateMinhaAgenda()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/book.png')} />
@@ -102,7 +128,7 @@ const Ferramentas = () => {
         <View style={styles.upContainer}>
           <TouchableOpacity
             style={[styles.item, styles.sos]}
-            onPress={() => ('')}
+            onPress={() => handleNavigateSosMecanica()}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/worker.png')} />
@@ -122,13 +148,13 @@ const Ferramentas = () => {
 
           <TouchableOpacity
             style={[styles.item, styles.sos]}
-            onPress={() => ('')}
+            onPress={() => { Linking.openURL('tel:190'); }}
             activeOpacity={0.6}
           >
             <Image style={styles.imagem} source={require('../../../icons/police.png')} />
 
             <Text style={styles.itemTitle}>S.O.S</Text>
-            <Text style={styles.itemSubtitle}>Polícia</Text>
+            <Text style={styles.itemSubtitle} >Polícia</Text>
 
           </TouchableOpacity>
         </View>

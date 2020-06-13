@@ -12,28 +12,16 @@ const Ferramentas = () => {
         navigation.goBack()
     }
 
-    function handleNavigateDicas() {
-        navigation.navigate('dicas')
+    function handleNavigateAerobico() {
+        navigation.navigate('aerobico')
       }
     
-      function handleNavigateExamesMedicos() {
-        navigation.navigate('examesMedicos')
+      function handleNavigateAlongamento() {
+        navigation.navigate('alongamento')
       }
     
-      function handleNavigateExercicios() {
-        navigation.navigate('exercicios')
-      }
-    
-      function handleNavigateMedicamentos() {
-        navigation.navigate('medicamentos')
-      }
-    
-      function handleNavigateMeuMedico() {
-        navigation.navigate('meuMedico')
-      }
-    
-      function handleNavigateMinhaSaude() {
-        navigation.navigate('minhaSaude')
+      function handleNavigateFortalecimento() {
+        navigation.navigate('fortalecimento')
       }
     
 
@@ -44,79 +32,45 @@ const Ferramentas = () => {
                     <Icon name="arrow-left" size={20} color="#34cb79" />
                 </TouchableOpacity>
                 <View style={styles.imageContainer}>
-                    <Image style={styles.imageLogo} source={require('../../../../assets/canivete.png')} />
+                    <Image style={styles.imageLogo} source={require('../../../../icons/exercise.png')} />
                 </View>
                 <View style={styles.textContainer}>
-                    <Text style={styles.textTitle}>Cuide-se</Text>
+                    <Text style={styles.textTitle}>Exercícios</Text>
                 </View>
             </View>
 
             <View style={styles.menuContainer}>
-                <View style={styles.upContainer}>
-                    <TouchableOpacity
-                        style={styles.item}
-                        onPress={() => handleNavigateExercicios()}
-                        activeOpacity={0.5}
-                    >
-                        <Image style={styles.imagem} source={require('../../../icons/timetable.png')} />
-
-                        <Text style={styles.itemTitle}>Exercícios</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={styles.item}
-                        onPress={() => handleNavigateDicas()}
-                        activeOpacity={0.5}
-                    >
-                        <Image style={styles.imagem} source={require('../../../icons/healthy-food.png')} />
-                        <Text style={styles.itemTitle}>Dicas e</Text>
-                        <Text style={styles.itemTitle}>Orientações</Text>
-                    </TouchableOpacity>
-
-
-                    <TouchableOpacity
-                        style={styles.item}
-                        onPress={() => handleNavigateMinhaSaude()}
-                        activeOpacity={0.5}
-                    >
-                        <Image style={styles.imagem} source={require('../../../icons/heart.png')} />
-                        <Text style={styles.itemTitle}>Minha</Text>
-                        <Text style={styles.itemSubtitle}>Saúde</Text>
-                    </TouchableOpacity>
-                </View>
-
+                
                 <View style={styles.downContainer}>
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateExamesMedicos()}
+                        onPress={() => handleNavigateAlongamento()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../icons/monitor.png')} />
-                        <Text style={styles.itemTitle}>Exames</Text>
-                        <Text style={styles.itemSubtitle}>Médicos</Text>
+                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
+                        <Text style={styles.itemTitle}>Alongamentos</Text>
 
                     </TouchableOpacity>
 
 
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateMedicamentos()}
+                        onPress={() => handleNavigateFortalecimento()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../icons/vitamins.png')} />
+                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
 
-                        <Text style={styles.itemTitleSmall}>Medicamentos</Text>
+                        <Text style={styles.itemTitleSmall}>Fortalecimento</Text>
                     </TouchableOpacity>
 
 
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateMeuMedico()}
+                        onPress={() => handleNavigateAerobico()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../icons/call.png')} />
-                        <Text style={styles.itemTitle}>Meu</Text>
-                        <Text style={styles.itemSubtitle}>Médico</Text>
+                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
+                        <Text style={styles.itemTitle}>Aeróbico</Text>
                     </TouchableOpacity>
 
 
