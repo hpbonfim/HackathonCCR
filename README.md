@@ -1,7 +1,7 @@
 
 <p align="center">
   <a  href="">
-    <img width="30%" src="mobile/assets/canivete.png" />
+    <img width="30%" src="assets/canivete.png" />
   </a>
 </p>
   <h1 align="center">Projeto para o HackathonCCR</h1>
