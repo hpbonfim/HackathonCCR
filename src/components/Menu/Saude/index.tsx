@@ -1,25 +1,104 @@
 import React from 'react'
-import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, SafeAreaView, Image, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Feather as Icon } from '@expo/vector-icons'
 import Constants from 'expo-constants'
 
 
-const Saude = () => {
-
+const Ferramentas = () => {
     const navigation = useNavigation()
 
     function handleNavigateBack() {
         navigation.goBack()
     }
 
+    function handleNavigateListaCCR() {
+        navigation.navigate('listaCCR')
+    }
+
     return (
         <SafeAreaView style={{ flex: 1 }} >
             <View style={styles.container}>
-
-                <TouchableOpacity onPress={handleNavigateBack}>
+                <TouchableOpacity onPress={() => handleNavigateBack()}>
                     <Icon name="arrow-left" size={20} color="#34cb79" />
                 </TouchableOpacity>
+                <View style={styles.imageContainer}>
+                    <Image style={styles.imageLogo} source={require('../../../../assets/canivete.png')} />
+                </View>
+                <View style={styles.textContainer}>
+                    <Text style={styles.textTitle}>Cuide-se</Text>
+                </View>
+            </View>
+
+            <View style={styles.menuContainer}>
+                <View style={styles.upContainer}>
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/timetable.png')} />
+
+                        <Text style={styles.itemTitle}>Exercícios</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => handleNavigateListaCCR()}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/healthy-food.png')} />
+                        <Text style={styles.itemTitle}>Dicas</Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/heart.png')} />
+                        <Text style={styles.itemTitle}>Minha</Text>
+                        <Text style={styles.itemSubtitle}>Saúde</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={styles.downContainer}>
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/monitor.png')} />
+                        <Text style={styles.itemTitle}>Exames</Text>
+                        <Text style={styles.itemSubtitle}>Médicos</Text>
+
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => ('')}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/vitamins.png')} />
+
+                        <Text style={styles.itemTitleSmall}>Medicamentos</Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity
+                        style={styles.item}
+                        onPress={() => handleNavigateListaCCR()}
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.imagem} source={require('../../../icons/call.png')} />
+                        <Text style={styles.itemTitle}>Meu</Text>
+                        <Text style={styles.itemSubtitle}>Médico</Text>
+                    </TouchableOpacity>
+
+
+                </View>
 
 
             </View>
@@ -27,82 +106,90 @@ const Saude = () => {
     )
 }
 
-
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 32,
         paddingTop: 20 + Constants.statusBarHeight,
     },
-
-    pointImage: {
-        width: '100%',
-        height: 120,
-        resizeMode: 'cover',
-        borderRadius: 10,
-        marginTop: 32,
+    menuContainer: {
+        flex: 1,
+        paddingTop: Constants.statusBarHeight
     },
-
-    pointName: {
-        color: '#322153',
-        fontSize: 28,
-        fontFamily: 'Ubuntu_700Bold',
-        marginTop: 24,
+    imageContainer: {
+        paddingHorizontal: 20,
     },
-
-    pointItems: {
-        fontFamily: 'Roboto_400Regular',
-        fontSize: 16,
-        lineHeight: 24,
-        marginTop: 8,
-        color: '#6C6C80'
-    },
-
-    address: {
-        marginTop: 32,
-    },
-
-    addressTitle: {
-        color: '#322153',
-        fontFamily: 'Roboto_500Medium',
-        fontSize: 16,
-    },
-
-    addressContent: {
-        fontFamily: 'Roboto_400Regular',
-        lineHeight: 24,
-        marginTop: 8,
-        color: '#6C6C80'
-    },
-
-    footer: {
-        borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: '#999',
-        paddingVertical: 20,
-        paddingHorizontal: 32,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-
-    button: {
-        width: '48%',
-        backgroundColor: '#34CB79',
-        borderRadius: 10,
-        height: 50,
+    upContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 5
+    },
+    downContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5
     },
 
-    buttonText: {
-        marginLeft: 8,
-        color: '#FFF',
-        fontSize: 16,
-        fontFamily: 'Roboto_500Medium',
+    itemsContainer: {
+        flexDirection: 'row',
+        marginTop: 16,
+        marginBottom: 32,
     },
 
+    item: {
+        backgroundColor: '#fff',
+        borderWidth: 2,
+        borderColor: '#eee',
+        borderRadius: 8,
+        height: 120,
+        width: 120,
+        paddingHorizontal: 16,
+        paddingTop: 20,
+        paddingBottom: 16,
+        marginRight: 8,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        textAlign: 'center',
+    },
+
+    textContainer: {
+        alignItems: 'center',
+        paddingTop: 10,
+        textAlign: 'center'
+    },
+    textTitle: {
+        fontSize: 64,
+        fontFamily: 'Girassol_400Regular'
+    },
+    itemTitleSmall: {
+        fontFamily: 'Roboto_400Regular',
+        textAlign: 'center',
+        fontSize: 14.5,
+        justifyContent: 'center',
+    },
+    itemTitle: {
+        fontFamily: 'Roboto_400Regular',
+        textAlign: 'center',
+        fontSize: 15,
+        justifyContent: 'center',
+    },
+    itemSubtitle: {
+        fontFamily: 'Roboto_400Regular',
+        textAlign: 'center',
+        fontSize: 15,
+    },
+
+    imagem: {
+        width: 42,
+        height: 42,
+        marginBottom: 10
+    },
+    imageLogo: {
+        width: 300,
+        height: 245
+    }
 });
 
-
-export default Saude;
+export default Ferramentas;

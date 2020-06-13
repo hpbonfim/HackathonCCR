@@ -4,6 +4,8 @@ import { AppLoading } from 'expo'
 
 import { Ubuntu_700Bold, useFonts } from '@expo-google-fonts/ubuntu'
 import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto'
+import { Girassol_400Regular } from '@expo-google-fonts/girassol';
+
 
 import Routes from './src/routes';
 
@@ -11,7 +13,8 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_500Medium,
     Roboto_400Regular,
-    Ubuntu_700Bold
+    Ubuntu_700Bold,
+    Girassol_400Regular
   })
 
   if (!fontsLoaded) {

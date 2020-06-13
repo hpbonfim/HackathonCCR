@@ -4,9 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Navigation from './pages/Navigation'
 import Mapa from './components/Menu/Mapa'
-import Ferramentas from './components/Menu/Ferramentas'
 import Saude from './components/Menu/Saude'
 
+import Ferramentas from './components/Menu/Ferramentas'
+import listaCCR from './components/Menu/Ferramentas/listaCCR'
 const Stack = createStackNavigator()
 
 const Routes = () => {
@@ -20,8 +21,10 @@ const Routes = () => {
             >
                 <Stack.Screen name="Navigation" component={Navigation} />
                 <Stack.Screen name="Mapa" component={Mapa} />
-                <Stack.Screen name="Ferramentas" component={Ferramentas} />
                 <Stack.Screen name="Saude" component={Saude} />
+                <Stack.Screen name="Ferramentas" component={Ferramentas} />
+                <Stack.Screen name="listaCCR" component={listaCCR} />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

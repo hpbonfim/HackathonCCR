@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { View, StyleSheet, TouchableOpacity, Text, ScrollView, SafeAreaView, Image } from 'react-native'
+import React from 'react'
+import { View, StyleSheet, TouchableOpacity, Text, SafeAreaView, Image } from 'react-native'
 import Constants from 'expo-constants'
 import { useNavigation } from '@react-navigation/native'
 import Landing from '../../components/Landing'

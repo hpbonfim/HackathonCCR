@@ -1,0 +1,104 @@
+{
+    "CCRSPVias": {
+        "nome": "CCR SPVias",
+        "telefone1": "(15) 3259-8000",
+        "endereco": "SP 127 - Rodovia Antonio Romano Schincariol, km 112,4",
+        "bairro": "Tatuí",
+        "uf": "SP",
+        "cep": "18.279-588",
+        "email": "ouvidoria.spvias@grupoccr.com.br"
+    },
+    "CCRRodoAnel": {
+        "nome": "CCR RodoAnel",
+        "telefone1": "(11) 2664-6097",
+        "endereco": "Rod. Presidente Castello Branco km 24, lado par",
+        "bairro": "Conjunto Norte",
+        "estado": "Barueri",
+        "uf": "SP",
+        "cep": "06463-400",
+        "email": "ouvidoriarodoaneloeste@grupoccr.com.br"
+    },
+    "CCRViaOeste": {
+        "nome": "CCR ViaOeste",
+        "telefone1": "(11) 2664-6060",
+        "endereco": "Rod. Presidente Castello Branco km 24, lado par",
+        "bairro": "Conjunto Norte",
+        "estado": "Barueri",
+        "uf": "SP",
+        "cep": "06463-400",
+        "email": "ouvidoriaviaoeste@grupoccr.com.br"
+    },
+    "Renovias": {
+        "nome": "Renovias",
+        "telefone1": "(19) 3814-2010",
+        "telefone2": "0800-055-9696",
+        "endereco": "Rodovia SP-340 km 161 - Pista Sul",
+        "estado": "Mogi Mirim",
+        "uf": "SP",
+        "email": "ouvidoria@renovias.com.br"
+    },
+    "ViaRio": {
+        "nome": "ViaRio",
+        "telefone1": "0800-084-2746",
+        "telefone2": "",
+        "telefone3": "",
+        "endereco": "Rua Euzébio de Almeida, 2500",
+        "bairro": "Jardim Sulacap",
+        "estado": "Rio de Janeiro",
+        "uf": "RJ",
+        "cep": "21.741-172"
+    },
+    "CCRMSVia": {
+        "nome": "CCR MSVia",
+        "telefone1": "0800-648-0163"
+    },
+    "EcoPonte": {
+        "nome": "EcoPonte",
+        "telefone1": "0800 77 76683"
+    },
+    "CCRViaSul": {
+        "nome": "CCR ViaSul",
+        "telefone1": "0800-000-0290"
+    },
+    "CCRAutoBAn": {
+        "nome": "CCR AutoBAn",
+        "telefone1": "0800-055-5550",
+        "telefone2": "(11) 4589-3871",
+        "telefone3": "",
+        "endereco": "Av. Prof.ª Maria do Carmo Guimarães Pellegrini, 200",
+        "bairro": "Bairro do Retiro",
+        "estado": "Jundiaí",
+        "uf": "SP",
+        "cep": "13209-500",
+        "email": "ouvidoria.autoban@grupoccr.com.br"
+    },
+    "CCRNovaDutra": {
+        "nome": "CCR NovaDutra",
+        "telefone1": "0800-017-3536",
+        "telefone2": "4000-1001",
+        "telefone3": "0800-444-1001",
+        "endereco": "Rod. Presidente Dutra, s/nº, KM 184,3",
+        "estado": "Santa Isabel",
+        "uf": "SP",
+        "cep": "07500-000"
+    },
+    "CCRViaLagos": {
+        "nome": "CCR ViaLagos",
+        "telefone1": "0800-702-0124",
+        "telefone2": "(21) 3634-9800",
+        "endereco": "RJ-124 - Palmital",
+        "estado": "Rio Bonito",
+        "uf": "RJ",
+        "cep": "28800-000"
+    },
+    "CCRRodoNorte": {
+        "nome": "CCR RodoNorte",
+        "telefone1": "0800-42-1500 ",
+        "telefone2": "4000-1001",
+        "telefone3": "0800-444-1001",
+        "endereco": "Rua Afonso Pena, 87",
+        "estado": "Ponta Grossa",
+        "uf": "PR",
+        "cep": "84040-170"
+    }
+}
