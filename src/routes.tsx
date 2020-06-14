@@ -5,8 +5,13 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Navigation from './pages/Navigation'
 import Mapa from './components/Menu/Mapa'
 import Saude from './components/Menu/Saude'
-import dicas from './components/Menu/Saude/dicas'
 import examesMedicos from './components/Menu/Saude/examesMedicos'
+
+import dicas from './components/Menu/Saude/dicas'
+import controle from './components/Menu/Saude/dicas/controle'
+import descanso from './components/Menu/Saude/dicas/descanso'
+import nutricao from './components/Menu/Saude/dicas/nutricao'
+
 
 import exercicios from './components/Menu/Saude/exercicios'
 import aerobico from './components/Menu/Saude/exercicios/aerobico'
@@ -47,6 +52,10 @@ const Routes = () => {
 
                 <Stack.Screen name="Saude" component={Saude} />
                 <Stack.Screen name="dicas" component={dicas} />
+                <Stack.Screen name="nutricao" component={nutricao} />
+                <Stack.Screen name="controle" component={controle} />
+                <Stack.Screen name="descanso" component={descanso} />
+
                 <Stack.Screen name="examesMedicos" component={examesMedicos} />
                 <Stack.Screen name="medicamentos" component={medicamentos} />
                 <Stack.Screen name="meuMedico" component={meuMedico} />

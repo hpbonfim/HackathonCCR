@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     },
 
     selectedItem: {
-        borderColor: '#34CB79',
+        borderColor: '#34C000',
         borderWidth: 2
     },
 

@@ -12,16 +12,16 @@ const dicas = () => {
         navigation.goBack()
     }
 
-    function handleNavigateAerobico() {
-        navigation.navigate('aerobico')
+    function handleNavigateNutricao() {
+        navigation.navigate('nutricao')
       }
     
-      function handleNavigateAlongamento() {
-        navigation.navigate('alongamento')
+      function handleNavigateControle() {
+        navigation.navigate('controle')
       }
     
-      function handleNavigateFortalecimento() {
-        navigation.navigate('fortalecimento')
+      function handleNavigateDescanso() {
+        navigation.navigate('descanso')
       }
     
 
@@ -29,7 +29,7 @@ const dicas = () => {
         <SafeAreaView style={{ flex: 1 }} >
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => handleNavigateBack()}>
-                    <Icon name="arrow-left" size={20} color="#34cb79" />
+                    <Icon name="arrow-left" size={20} color="#34C000" />
                 </TouchableOpacity>
                 <View style={styles.imageContainer}>
                     <Image style={styles.imageLogo} source={require('../../../../icons/healthy-food.png')} />
@@ -44,7 +44,7 @@ const dicas = () => {
                 <View style={styles.downContainer}>
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateAlongamento()}
+                        onPress={() => handleNavigateNutricao()}
                         activeOpacity={0.5}
                     >
                         <Image style={styles.imagem} source={require('../../../../icons/healthy-food.png')} />
@@ -55,7 +55,7 @@ const dicas = () => {
 
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateFortalecimento()}
+                        onPress={() => handleNavigateDescanso()}
                         activeOpacity={0.5}
                     >
                         <Image style={styles.imagem} source={require('../../../../icons/sleep.png')} />
@@ -66,7 +66,7 @@ const dicas = () => {
 
                     <TouchableOpacity
                         style={styles.item}
-                        onPress={() => handleNavigateAerobico()}
+                        onPress={() => handleNavigateControle()}
                         activeOpacity={0.5}
                     >
                         <Image style={styles.imagem} source={require('../../../../icons/logo.png')} />

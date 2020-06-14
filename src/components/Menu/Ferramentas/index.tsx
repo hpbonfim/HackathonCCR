@@ -49,7 +49,7 @@ const Ferramentas = () => {
 
       <View style={styles.container}>
         <TouchableOpacity onPress={() => handleNavigateBack()}>
-          <Icon name="arrow-left" size={20} color="#34cb79" />
+          <Icon name="arrow-left" size={20} color="#34C000" />
         </TouchableOpacity>
         <View style={styles.imageContainer}>
           <Image style={styles.imageLogo} source={require('../../../../assets/canivete.png')} />

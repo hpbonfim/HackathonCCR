@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 import { Feather as Icon } from '@expo/vector-icons'
 import Constants from 'expo-constants'
-import lista from './ccr.json'
+import lista from '../../../../../mock/ccr.json'
 
 const listaCCR = () => {
     const navigation = useNavigation()
@@ -96,7 +96,7 @@ const listaCCR = () => {
         <SafeAreaView style={{ flex: 1 }} >
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => handleNavigateBack()}>
-                    <Icon name="arrow-left" size={20} color="#34cb79" />
+                    <Icon name="arrow-left" size={20} color="#34C000" />
                 </TouchableOpacity>
 
 
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     },
 
     selectedItem: {
-        borderColor: '#34CB79',
+        borderColor: '#34C000',
         borderWidth: 2,
     },
 

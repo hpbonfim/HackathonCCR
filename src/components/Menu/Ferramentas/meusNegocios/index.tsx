@@ -17,7 +17,7 @@ const meusNegocios = () => {
         <SafeAreaView style={{ flex: 1 }} >
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => handleNavigateBack()}>
-                    <Icon name="arrow-left" size={20} color="#34cb79" />
+                    <Icon name="arrow-left" size={20} color="#34C000" />
                 </TouchableOpacity>
 
 <Text>TO-DO</Text>

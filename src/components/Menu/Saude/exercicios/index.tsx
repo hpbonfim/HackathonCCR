@@ -29,7 +29,7 @@ const Ferramentas = () => {
         <SafeAreaView style={{ flex: 1 }} >
             <View style={styles.container}>
                 <TouchableOpacity onPress={() => handleNavigateBack()}>
-                    <Icon name="arrow-left" size={20} color="#34cb79" />
+                    <Icon name="arrow-left" size={20} color="#34C000" />
                 </TouchableOpacity>
                 <View style={styles.imageContainer}>
                     <Image style={styles.imageLogo} source={require('../../../../icons/exercise.png')} />
@@ -47,7 +47,7 @@ const Ferramentas = () => {
                         onPress={() => handleNavigateAlongamento()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
+                        <Image style={styles.imagem} source={require('../../../../icons/sport.png')} />
                         <Text style={styles.itemTitle}>Alongamentos</Text>
 
                     </TouchableOpacity>
@@ -58,7 +58,7 @@ const Ferramentas = () => {
                         onPress={() => handleNavigateFortalecimento()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
+                        <Image style={styles.imagem} source={require('../../../../icons/healthy.png')} />
 
                         <Text style={styles.itemTitleSmall}>Fortalecimento</Text>
                     </TouchableOpacity>
@@ -69,7 +69,7 @@ const Ferramentas = () => {
                         onPress={() => handleNavigateAerobico()}
                         activeOpacity={0.5}
                     >
-                        <Image style={styles.imagem} source={require('../../../../icons/exercise.png')} />
+                        <Image style={styles.imagem} source={require('../../../../icons/jump.png')} />
                         <Text style={styles.itemTitle}>Aeróbico</Text>
                     </TouchableOpacity>
 
