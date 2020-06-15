@@ -72,15 +72,15 @@ const Navigation = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 32,
-        paddingTop: 20 + Constants.statusBarHeight
+        paddingTop: 20 + Constants.statusBarHeight,
+        paddingHorizontal: 32
     },
 
     menuContainer: {
         flexDirection: 'row',
         marginTop: 16,
+        justifyContent: 'center',
         marginBottom: 32,
-        justifyContent: 'center'
 
     },
 

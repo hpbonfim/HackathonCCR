@@ -66,8 +66,8 @@ const controle = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 32,
         paddingTop: 20 + Constants.statusBarHeight,
+        paddingHorizontal: 32
     },
 
     itemsContainer: {
@@ -77,10 +77,10 @@ const styles = StyleSheet.create({
     },
 
     image: {
+        resizeMode: 'cover',
         width: 330,
         marginTop: 5,
         height: 200,
-        resizeMode: 'cover',
         borderRadius: 10,
         marginLeft: 4
     },
@@ -88,17 +88,17 @@ const styles = StyleSheet.create({
     button: {
         paddingBottom: 10,
         margin: 10,
-        borderWidth: 1,
         borderColor: '#000',
+        borderWidth: 1,
         borderRadius: 10
     },
 
     text: {
         flex: 1,
         paddingTop: 10,
+        fontFamily: 'Roboto_400Regular',
         paddingLeft: 10,
         textAlign: 'left',
-        fontFamily: 'Roboto_400Regular',
         color: '#00F',
         fontSize: 20,
         lineHeight: 23,
@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingLeft: 10,
         textAlign: 'left',
-        fontFamily: 'Roboto_400Regular',
         color: '#696969',
         fontSize: 12,
+        fontFamily: 'Roboto_400Regular',
         lineHeight: 23,
     }
 });
