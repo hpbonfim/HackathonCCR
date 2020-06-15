@@ -4,8 +4,7 @@
     <img width="30%" src="assets/canivete.png" />
   </a>
 </p>
-  <h1 align="center">Projeto para o HackathonCCR</h1>
-
+  <h1 align="center">Canivete Perneta - Projeto para o HackathonCCR</h1>
 
 
   <p align="center">
@@ -34,12 +33,14 @@
   </a>
   </p>
 
-
 <p align="center">
   <a  href="">
-    <img width="70%" src="hackathonccr.png" />
+    <img width="50%" src="canivete.png" />
   </a>
 </p>
+
+
+
 
 
 
@@ -59,4 +60,10 @@ $ expo start
 ```
 
 
+
+<p align="center">
+  <a  href="">
+    <img width="70%" src="hackathonccr.png" />
+  </a>
+</p>
 <p align="center">Made with ❤️ by <a href="https://github.com/hpbonfim" >Henrique Bonfim</a>
